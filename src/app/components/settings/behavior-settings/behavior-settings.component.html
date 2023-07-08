@@ -1,0 +1,42 @@
+<div class="p-4">
+    <h2>{{ 'notification-area' | translate }}</h2>
+    <div>
+        <mat-slide-toggle [(ngModel)]="this.settings.showIconInNotificationArea">
+            {{ 'show-icon-in-notification-area' | translate }}</mat-slide-toggle
+        >
+    </div>
+    <div>
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.settings.minimizeToNotificationArea">
+            {{ 'minimize-to-notification-area' | translate }}</mat-slide-toggle
+        >
+    </div>
+    <div>
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.settings.closeToNotificationArea">
+            {{ 'close-to-notification-area' | translate }}</mat-slide-toggle
+        >
+    </div>
+    <div *ngIf="this.trayService.needInvertNotificationAreaIconColor">
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.trayService.invertNotificationAreaIconColor">
+            {{ 'invert-notification-area-icon-color' | translate }}</mat-slide-toggle
+        >
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div class="p-4">
+    <h2>{{ 'rating' | translate }}</h2>
+    <div>
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.settings.showRating"> {{ 'show-rating' | translate }}</mat-slide-toggle>
+    </div>
+    <div>
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.settings.saveRatingToAudioFiles">
+            {{ 'save-rating-to-audio-files' | translate }}</mat-slide-toggle
+        >
+    </div>
+</div>
+<mat-divider></mat-divider>
+<div class="p-4">
+    <h2>{{ 'love' | translate }}</h2>
+    <div>
+        <mat-slide-toggle class="mt-3" [(ngModel)]="this.settings.showLove"> {{ 'show-love' | translate }}</mat-slide-toggle>
+    </div>
+</div>

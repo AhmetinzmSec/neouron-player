@@ -1,0 +1,18 @@
+.window-button {
+    fill: var(--theme-window-button-icon);
+    color: var(--theme-window-button-icon);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 100%;
+    user-select: none;
+    cursor: default;
+    opacity: 0.8;
+    -webkit-app-region: no-drag;
+}
+
+.window-button:hover {
+    background-color: var(--theme-hovered-item-background);
+    opacity: 1;
+}
