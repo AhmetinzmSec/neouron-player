@@ -33,28 +33,28 @@ jobs:
             - name: uploading rpm artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-rpm
-                  path: release/Dopamine-*.rpm
+                  name: Neuron-merge-rpm
+                  path: release/Neuron-*.rpm
             - name: upload deb artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-deb
-                  path: release/Dopamine-*.deb
+                  name: Neuron-merge-deb
+                  path: release/Neuron-*.deb
             - name: upload appimage artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-appimage
-                  path: release/Dopamine-*.AppImage
+                  name: Neuron-merge-appimage
+                  path: release/Neuron-*.AppImage
             - name: upload snap artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-snap
-                  path: release/Dopamine-*.snap
+                  name: Neuron-merge-snap
+                  path: release/Neuron-*.snap
             - name: upload pacman artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-pacman
-                  path: release/Dopamine-*.pacman
+                  name: Neuron-merge-pacman
+                  path: release/Neuron-*.pacman
 
     merge_build_on_mac:
         runs-on: macos-11
@@ -79,8 +79,8 @@ jobs:
             - name: upload build artifacts
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-macos
-                  path: release/Dopamine-*.dmg
+                  name: Neuron-merge-macos
+                  path: release/Neuron-*.dmg
 
     merge_build_on_win:
         runs-on: windows-2019
@@ -105,5 +105,5 @@ jobs:
             - name: upload build artifacts
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-merge-win
-                  path: release\Dopamine-*.exe
+                  name: Neuron-merge-win
+                  path: release\Neuron-*.exe

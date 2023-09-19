@@ -42,7 +42,7 @@ export class PlaylistFileManager {
 
     private initialize(): void {
         const musicDirectory: string = this.fileAccess.musicDirectory();
-        this._playlistsParentFolderPath = this.fileAccess.combinePath([musicDirectory, 'Dopamine', ApplicationPaths.playlistsFolder]);
+        this._playlistsParentFolderPath = this.fileAccess.combinePath([musicDirectory, 'Neuron', ApplicationPaths.playlistsFolder]);
     }
 
     public async getPlaylistsInPathAsync(path: string): Promise<PlaylistModel[]> {

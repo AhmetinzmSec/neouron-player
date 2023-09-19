@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy {
         private logger: Logger
     ) {
         log.create('renderer');
-        log.transports.file.resolvePath = () => path.join(this.desktop.getApplicationDataDirectory(), 'logs', 'Dopamine.log');
+        log.transports.file.resolvePath = () => path.join(this.desktop.getApplicationDataDirectory(), 'logs', 'Neuron.log');
     }
 
     @ViewChild('playbackQueueDrawer') public playbackQueueDrawer: MatDrawer;

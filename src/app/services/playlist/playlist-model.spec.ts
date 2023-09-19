@@ -11,8 +11,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
@@ -26,8 +26,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
@@ -41,8 +41,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
@@ -56,12 +56,12 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
-            expect(playlist.path).toEqual('/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u');
+            expect(playlist.path).toEqual('/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u');
         });
 
         it('should set imagePath', () => {
@@ -71,12 +71,12 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
-            expect(playlist.imagePath).toEqual('/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png');
+            expect(playlist.imagePath).toEqual('/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png');
         });
 
         it('should initialize isSelected as false', () => {
@@ -86,8 +86,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist 1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Assert
@@ -101,8 +101,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 undefined,
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Act
@@ -116,8 +116,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 '',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Act
@@ -131,8 +131,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 ' ',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Act
@@ -146,8 +146,8 @@ describe('PlaylistModel', () => {
             const playlist: PlaylistModel = new PlaylistModel(
                 'Playlist1',
                 'Playlist 1 folder',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.m3u',
-                '/home/user/Music/Dopamine/Playlists/Folder 1/Playlist1.png'
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.m3u',
+                '/home/user/Music/Neuron/Playlists/Folder 1/Playlist1.png'
             );
 
             // Act

@@ -2,7 +2,7 @@ const { getFullVersion } = require('./get-package-information.js');
 
 const config = {
     appId: 'com.kapgan.neuron',
-    productName: 'Dopamine',
+    productName: 'Neuron',
     fileAssociations: [
         {
             name: 'MP3 Files',
@@ -42,7 +42,7 @@ const config = {
         },
     ],
     nsis: {
-        shortcutName: 'Dopamine 3',
+        shortcutName: 'Neuron 3',
         perMachine: true,
     },
     directories: {

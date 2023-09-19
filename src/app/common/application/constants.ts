@@ -3,10 +3,11 @@ import { FontSize } from './font-size';
 import { Language } from './language';
 
 export class Constants {
-    public static readonly logFileName: string = 'Dopamine.log';
+    public static readonly logFileName: string = 'Neuron.log';
 
     public static readonly languages: Language[] = [
         new Language('bg', 'Bulgarian', 'български', false),
+        new Language('tr', 'Turkish', 'Türkçe', true),
         new Language('cs', 'Czech', 'Čeština', true),
         new Language('de', 'German', 'Deutsch', true),
         new Language('el', 'Greek', 'Ελληνικά', true),
@@ -17,7 +18,6 @@ export class Constants {
         new Language('nl', 'Dutch', 'Nederlands', true),
         new Language('pt-BR', 'Brazilian Portuguese', 'Português Brasileiro', true),
         new Language('ja-JP', 'Japanese', '日本語', false),
-        new Language('ku', 'Kurdish', 'Kurdî', true),
         new Language('ru', 'Russian', 'русский', false),
         new Language('vi', 'Vietnamese', 'Tiếng Việt', true),
         new Language('zh-CN', 'Simplified Chinese', '简体中文', false),
@@ -150,7 +150,7 @@ export class Constants {
             'https://github.com/jprichardson/node-fs-extra',
             'https://github.com/jprichardson/node-fs-extra/blob/master/LICENSE'
         ),
-        new ExternalComponent('Icons designed by Sharlee', 'Gorgeous Dopamine icons designed by Sharlee.', 'https://www.itssharl.ee/', ''),
+        new ExternalComponent('Icons designed by Sharlee', 'Gorgeous Neuron icons designed by Sharlee.', 'https://www.itssharl.ee/', ''),
         new ExternalComponent(
             'Icons8 Line Awesome',
             'Replace Font Awesome with modern line icons.',

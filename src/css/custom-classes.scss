@@ -40,13 +40,21 @@
 }
 
 .left-side-pane {
-    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #28282b;
+    border: 1px solid #28282b;
+    margin: 2%;
+    height: 97%;
     background-color: var(--theme-side-pane-background);
     border-right: 1px solid var(--theme-pane-separators);
 }
 
 .right-side-pane {
-    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px #28282b;
+    border: 1px solid #28282b;
+    margin: 2%;
+    height: 97%;
     background-color: var(--theme-side-pane-background);
     border-left: 1px solid var(--theme-pane-separators);
 }

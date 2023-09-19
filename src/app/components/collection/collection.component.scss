@@ -14,8 +14,8 @@
     See: https://github.com/angular/components/issues/23157
     */
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0.5%;
+    left: 0.5%;
+    right: 0.5%;
     z-index: 1; // Without this, buttons in playback pane are not clickable.
 }

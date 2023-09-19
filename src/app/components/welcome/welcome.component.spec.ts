@@ -83,7 +83,7 @@ describe('WelcomeComponent', () => {
             // Act
 
             // Assert
-            expect(component.donateUrl).toEqual('https://digimezzo.github.io/site/donate');
+            expect(component.donateUrl).toEqual('https://hackadia.github.io/site/donate');
         });
     });
 

@@ -7,11 +7,11 @@ import { ThemeOptions } from './theme/theme-options';
 
 @Injectable()
 export class DefaultThemesCreator {
-    private creator: ThemeCreator = new ThemeCreator('Digimezzo', 'digimezzo@outlook.com');
+    private creator: ThemeCreator = new ThemeCreator('hackadia', 'hackadia@outlook.com');
 
     public createAllThemes(): Theme[] {
         const themes: Theme[] = [];
-        themes.push(this.createDopamineTheme());
+        themes.push(this.createNeuronTheme());
         themes.push(this.createZuneTheme());
         themes.push(this.createBeatsTheme());
         themes.push(this.createNaughtyTheme());
@@ -22,17 +22,17 @@ export class DefaultThemesCreator {
         return themes;
     }
 
-    private createDopamineTheme(): Theme {
+    private createNeuronTheme(): Theme {
         const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
             '#5e5e5e', // windowButtonIcon
             'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
             'rgba(255, 255, 255, 0.1)', // selectedItemBackground
             '#666', // tabText
             '#fff', // selectedTabText
-            '#1a1a1a', // mainBackground
-            '#111', // headerBackground
-            '#111', // footerBackground
-            '#171717', // sidePaneBackground
+            '#101013', // mainBackground
+            '#131316', // headerBackground
+            '#131316', // footerBackground
+            '#131316', // sidePaneBackground
             '#fff', // primaryText
             '#5e5e5e', // secondaryText
             '#272727', // breadcrumbBackground
@@ -47,7 +47,7 @@ export class DefaultThemesCreator {
             '#202020', // searchBox
             '#fff', // searchBoxText
             '#5e5e5e', // searchBoxIcon
-            '#111', // dialogBackground
+            '#131316', // dialogBackground
             '#fff', // primaryButtonText
             '#585858', // secondaryButtonBackground
             '#fff', // secondaryButtonText
@@ -87,7 +87,7 @@ export class DefaultThemesCreator {
 
         const options: ThemeOptions = new ThemeOptions(false);
 
-        return new Theme('Dopamine', this.creator, new ThemeCoreColors('#6260e3', '#3fdcdd', '#4883e0'), darkColors, lightColors, options);
+        return new Theme('Neuron', this.creator, new ThemeCoreColors('#6260e3', '#3fdcdd', '#4883e0'), darkColors, lightColors, options);
     }
 
     private createZuneTheme(): Theme {
@@ -369,10 +369,10 @@ export class DefaultThemesCreator {
             'rgba(255, 255, 255, 0.1)', // selectedItemBackground
             '#818181', // tabText
             'white', // selectedTabText
-            '#2d2d2d', // mainBackground
-            '#313131', // headerBackground
-            '#313131', // footerBackground
-            '#313131', // sidePaneBackground
+            '#1e1e28', // mainBackground
+            '#1b1923', // headerBackground
+            '#1b1923', // footerBackground
+            '#1b1923', // sidePaneBackground
             'white', // primaryText
             '#818181', // secondaryText
             '#373737', // breadcrumbBackground
@@ -384,10 +384,10 @@ export class DefaultThemesCreator {
             '#1b1b1b', // settingsSeparators
             '#1b1b1b', // contextMenuSeparators
             '#7a7a79', // scrollBars
-            '#373737', // searchBox
+            '#1e1e28', // searchBox
             '#fff', // searchBoxText
             '#fff', // searchBoxIcon
-            '#313131', // dialogBackground
+            '#1b1923', // dialogBackground
             '#fff', // primaryButtonText
             '#595959', // secondaryButtonBackground
             '#fff', // secondaryButtonText
@@ -427,7 +427,7 @@ export class DefaultThemesCreator {
 
         const options: ThemeOptions = new ThemeOptions(true);
 
-        return new Theme('Manjaro', this.creator, new ThemeCoreColors('#009378', '#2eae92', '#16a085'), darkColors, lightColors, options);
+        return new Theme('Catppuccin', this.creator, new ThemeCoreColors('#e38c8f', '#b1e3ad', '#f2cecf'), darkColors, lightColors, options);
     }
 
     private createPalenightTheme(): Theme {
@@ -479,7 +479,7 @@ export class DefaultThemesCreator {
             '#fff', // sliderThumbBackground
             '#7b83a7', // albumCoverLogo
             '#212433', // albumCoverBackground
-            'transparent', // paneSeparators
+            'transparent', // paneSeparators 
             '#282c3d', // settingsSeparators
             '#31364a', // contextMenuSeparators
             '#00908c', // scrollBars

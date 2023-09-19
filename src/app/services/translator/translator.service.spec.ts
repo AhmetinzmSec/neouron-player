@@ -12,8 +12,8 @@ describe('TranslatorService', () => {
 
     beforeEach(() => {
         translateServiceProxyMock = Mock.ofType<BaseTranslateServiceProxy>();
-        translateServiceProxyMock.setup((x) => x.get('welcome-to-dopamine', undefined)).returns(async () => 'Welcome to Dopamine');
-        translateServiceProxyMock.setup((x) => x.instant('welcome-to-dopamine', undefined)).returns(() => 'Welcome to Dopamine');
+        translateServiceProxyMock.setup((x) => x.get('welcome-to-Neuron', undefined)).returns(async () => 'Welcome to Neuron');
+        translateServiceProxyMock.setup((x) => x.instant('welcome-to-Neuron', undefined)).returns(() => 'Welcome to Neuron');
         translateServiceProxyMock
             .setup((x) =>
                 x.get('tracks-added', {
@@ -151,10 +151,10 @@ describe('TranslatorService', () => {
             const service: TranslatorService = createService();
 
             // Act
-            const translatedText: string = await service.getAsync('welcome-to-dopamine');
+            const translatedText: string = await service.getAsync('welcome-to-Neuron');
 
             // Assert
-            expect(translatedText).toEqual('Welcome to Dopamine');
+            expect(translatedText).toEqual('Welcome to Neuron');
         });
 
         it('should get language text when parameters are specified', async () => {
@@ -177,10 +177,10 @@ describe('TranslatorService', () => {
             const service: TranslatorService = createService();
 
             // Act
-            const translatedText: string = service.get('welcome-to-dopamine');
+            const translatedText: string = service.get('welcome-to-Neuron');
 
             // Assert
-            expect(translatedText).toEqual('Welcome to Dopamine');
+            expect(translatedText).toEqual('Welcome to Neuron');
         });
 
         it('should get language text when parameters are specified', () => {

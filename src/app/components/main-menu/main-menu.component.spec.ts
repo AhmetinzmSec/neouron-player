@@ -43,7 +43,7 @@ describe('MainMenuComponent', () => {
             // Act
 
             // Assert
-            expect(component.applicationName).toEqual('Dopamine');
+            expect(component.applicationName).toEqual('Neuron');
         });
     });
 

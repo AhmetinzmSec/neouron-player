@@ -35,8 +35,8 @@ describe('PlaylistService', () => {
 //     }
 
 //     function createPlaylistFolders(): PlaylistFolderModel[] {
-//         const playlistFolder1: PlaylistFolderModel = new PlaylistFolderModel('Folder 1', '/home/User/Music/Dopamine/Playlists/Folder 1');
-//         const playlistFolder2: PlaylistFolderModel = new PlaylistFolderModel('Folder 2', '/home/User/Music/Dopamine/Playlists/Folder 2');
+//         const playlistFolder1: PlaylistFolderModel = new PlaylistFolderModel('Folder 1', '/home/User/Music/Neuron/Playlists/Folder 1');
+//         const playlistFolder2: PlaylistFolderModel = new PlaylistFolderModel('Folder 2', '/home/User/Music/Neuron/Playlists/Folder 2');
 
 //         return [playlistFolder1, playlistFolder2];
 //     }
@@ -51,62 +51,62 @@ describe('PlaylistService', () => {
 //         playlistFoldersChanged$ = playlistFoldersChanged.asObservable();
 
 //         playlistFolderModelFactoryMock
-//             .setup((x) => x.create('/home/User/Music/Dopamine/Playlists'))
-//             .returns(() => new PlaylistFolderModel('Playlists', '/home/User/Music/Dopamine/Playlists', true));
+//             .setup((x) => x.create('/home/User/Music/Neuron/Playlists'))
+//             .returns(() => new PlaylistFolderModel('Playlists', '/home/User/Music/Neuron/Playlists', true));
 
 //         playlistFolderModelFactoryMock
-//             .setup((x) => x.create('/home/User/Music/Dopamine/Playlists/Folder 1'))
-//             .returns(() => new PlaylistFolderModel('Folder 1', '/home/User/Music/Dopamine/Playlists/Folder 1', true));
+//             .setup((x) => x.create('/home/User/Music/Neuron/Playlists/Folder 1'))
+//             .returns(() => new PlaylistFolderModel('Folder 1', '/home/User/Music/Neuron/Playlists/Folder 1', true));
 
 //         playlistFolderModelFactoryMock
-//             .setup((x) => x.create('/home/User/Music/Dopamine/Playlists/Folder 2'))
-//             .returns(() => new PlaylistFolderModel('Folder 2', '/home/User/Music/Dopamine/Playlists/Folder 2', true));
+//             .setup((x) => x.create('/home/User/Music/Neuron/Playlists/Folder 2'))
+//             .returns(() => new PlaylistFolderModel('Folder 2', '/home/User/Music/Neuron/Playlists/Folder 2', true));
 
 //         playlistModelFactoryMock
-//             .setup((x) => x.create('/home/User/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u'))
+//             .setup((x) => x.create('/home/User/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u'))
 //             .returns(
 //                 () =>
 //                     new PlaylistModel(
 //                         'Playlist 1',
-//                         '/home/User/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u',
-//                         '/home/User/Music/Dopamine/Playlists/Folder 1/Playlist 1.png'
+//                         '/home/User/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u',
+//                         '/home/User/Music/Neuron/Playlists/Folder 1/Playlist 1.png'
 //                     )
 //             );
 //         playlistModelFactoryMock
-//             .setup((x) => x.create('/home/User/Music/Dopamine/Playlists/Folder 2/Playlist 2.m3u'))
+//             .setup((x) => x.create('/home/User/Music/Neuron/Playlists/Folder 2/Playlist 2.m3u'))
 //             .returns(
 //                 () =>
 //                     new PlaylistModel(
 //                         'Playlist 2',
-//                         '/home/User/Music/Dopamine/Playlists/Folder 2/Playlist 2.m3u',
-//                         '/home/User/Music/Dopamine/Playlists/Folder 2/Playlist 2.png'
+//                         '/home/User/Music/Neuron/Playlists/Folder 2/Playlist 2.m3u',
+//                         '/home/User/Music/Neuron/Playlists/Folder 2/Playlist 2.png'
 //                     )
 //             );
 
 //         fileSystemMock.setup((x) => x.musicDirectory()).returns(() => '/home/User/Music');
 //         fileSystemMock
-//             .setup((x) => x.combinePath(['/home/User/Music', 'Dopamine', 'Playlists']))
-//             .returns(() => '/home/User/Music/Dopamine/Playlists');
+//             .setup((x) => x.combinePath(['/home/User/Music', 'Neuron', 'Playlists']))
+//             .returns(() => '/home/User/Music/Neuron/Playlists');
 
 //         fileSystemMock
-//             .setup((x) => x.combinePath(['/home/User/Music/Dopamine/Playlists', 'My playlist folder']))
-//             .returns(() => '/home/User/Music/Dopamine/Playlists/My playlist folder');
+//             .setup((x) => x.combinePath(['/home/User/Music/Neuron/Playlists', 'My playlist folder']))
+//             .returns(() => '/home/User/Music/Neuron/Playlists/My playlist folder');
 
 //         fileSystemMock
-//             .setup((x) => x.getDirectoriesInDirectoryAsync('/home/User/Music/Dopamine/Playlists'))
-//             .returns(async () => ['/home/User/Music/Dopamine/Playlists/Folder 1', '/home/User/Music/Dopamine/Playlists/Folder 2']);
+//             .setup((x) => x.getDirectoriesInDirectoryAsync('/home/User/Music/Neuron/Playlists'))
+//             .returns(async () => ['/home/User/Music/Neuron/Playlists/Folder 1', '/home/User/Music/Neuron/Playlists/Folder 2']);
 
 //         fileSystemMock
-//             .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Dopamine/Playlists/Folder 1'))
-//             .returns(async () => ['/home/User/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u']);
+//             .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Neuron/Playlists/Folder 1'))
+//             .returns(async () => ['/home/User/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u']);
 
 //         fileSystemMock
-//             .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Dopamine/Playlists/Folder 2'))
-//             .returns(async () => ['/home/User/Music/Dopamine/Playlists/Folder 2/Playlist 2.m3u']);
+//             .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Neuron/Playlists/Folder 2'))
+//             .returns(async () => ['/home/User/Music/Neuron/Playlists/Folder 2/Playlist 2.m3u']);
 
-//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Dopamine/Playlists/File1.txt')).returns(() => '.txt');
-//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Dopamine/Playlists/File1.m3u')).returns(() => '.m3u');
-//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Dopamine/Playlists/File2.m3u8')).returns(() => '.m3u8');
+//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Neuron/Playlists/File1.txt')).returns(() => '.txt');
+//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Neuron/Playlists/File1.m3u')).returns(() => '.m3u');
+//         fileSystemMock.setup((x) => x.getFileExtension('/home/User/Music/Neuron/Playlists/File2.m3u8')).returns(() => '.m3u8');
 
 //         textSanitizerMock.setup((x) => x.sanitize('My dirty playlist folder')).returns(() => 'My playlist folder');
 //         textSanitizerMock.setup((x) => x.sanitize('My new dirty playlist folder')).returns(() => 'My new playlist folder');
@@ -130,7 +130,7 @@ describe('PlaylistService', () => {
 //             const service: BasePlaylistService = createService();
 
 //             // Assert
-//             fileSystemMock.verify((x) => x.createFullDirectoryPathIfDoesNotExist('/home/User/Music/Dopamine/Playlists'), Times.once());
+//             fileSystemMock.verify((x) => x.createFullDirectoryPathIfDoesNotExist('/home/User/Music/Neuron/Playlists'), Times.once());
 //         });
 
 //         it('should define playlistFoldersChanged$', () => {
@@ -195,7 +195,7 @@ describe('PlaylistService', () => {
 
 //             // Assert
 //             fileSystemMock.verify(
-//                 (x) => x.createFullDirectoryPathIfDoesNotExist('/home/User/Music/Dopamine/Playlists/My playlist folder'),
+//                 (x) => x.createFullDirectoryPathIfDoesNotExist('/home/User/Music/Neuron/Playlists/My playlist folder'),
 //                 Times.once()
 //             );
 //         });
@@ -224,7 +224,7 @@ describe('PlaylistService', () => {
 //     describe('getPlaylistFoldersAsync', () => {
 //         it('should get the playlist folders without parent folder if there are no files in the parent folder', async () => {
 //             // Arrange
-//             fileSystemMock.setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Dopamine/Playlists')).returns(async () => []);
+//             fileSystemMock.setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Neuron/Playlists')).returns(async () => []);
 
 //             const service: BasePlaylistService = createService();
 
@@ -233,15 +233,15 @@ describe('PlaylistService', () => {
 
 //             // Assert
 //             expect(playlistFolders.length).toEqual(2);
-//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 1');
-//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 2');
+//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 1');
+//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 2');
 //         });
 
 //         it('should get the playlist folders without parent folder if there are files which are not playlists in the parent folder', async () => {
 //             // Arrange
 //             fileSystemMock
-//                 .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Dopamine/Playlists'))
-//                 .returns(async () => ['/home/User/Music/Dopamine/Playlists/File1.txt']);
+//                 .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Neuron/Playlists'))
+//                 .returns(async () => ['/home/User/Music/Neuron/Playlists/File1.txt']);
 
 //             const service: BasePlaylistService = createService();
 
@@ -250,15 +250,15 @@ describe('PlaylistService', () => {
 
 //             // Assert
 //             expect(playlistFolders.length).toEqual(2);
-//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 1');
-//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 2');
+//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 1');
+//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 2');
 //         });
 
 //         it('should get the playlist folders with parent folder if there are playlist files in the parent folder', async () => {
 //             // Arrange
 //             fileSystemMock
-//                 .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Dopamine/Playlists'))
-//                 .returns(async () => ['/home/User/Music/Dopamine/Playlists/File1.m3u']);
+//                 .setup((x) => x.getFilesInDirectoryAsync('/home/User/Music/Neuron/Playlists'))
+//                 .returns(async () => ['/home/User/Music/Neuron/Playlists/File1.m3u']);
 
 //             const service: BasePlaylistService = createService();
 
@@ -267,9 +267,9 @@ describe('PlaylistService', () => {
 
 //             // Assert
 //             expect(playlistFolders.length).toEqual(3);
-//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Dopamine/Playlists');
-//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 1');
-//             expect(playlistFolders[2].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 2');
+//             expect(playlistFolders[0].path).toEqual('/home/User/Music/Neuron/Playlists');
+//             expect(playlistFolders[1].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 1');
+//             expect(playlistFolders[2].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 2');
 //         });
 //     });
 
@@ -366,8 +366,8 @@ describe('PlaylistService', () => {
 
 //             // Assert
 //             expect(playlists.length).toEqual(2);
-//             expect(playlists[0].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u');
-//             expect(playlists[1].path).toEqual('/home/User/Music/Dopamine/Playlists/Folder 2/Playlist 2.m3u');
+//             expect(playlists[0].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u');
+//             expect(playlists[1].path).toEqual('/home/User/Music/Neuron/Playlists/Folder 2/Playlist 2.m3u');
 //         });
 //     });
 // });

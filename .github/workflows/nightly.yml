@@ -33,28 +33,28 @@ jobs:
             - name: uploading rpm artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-rpm
-                  path: release/Dopamine-*.rpm
+                  name: Neuron-nightly-rpm
+                  path: release/Neuron-*.rpm
             - name: upload deb artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-deb
-                  path: release/Dopamine-*.deb
+                  name: Neuron-nightly-deb
+                  path: release/Neuron-*.deb
             - name: upload appimage artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-appimage
-                  path: release/Dopamine-*.AppImage
+                  name: Neuron-nightly-appimage
+                  path: release/Neuron-*.AppImage
             - name: upload snap artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-snap
-                  path: release/Dopamine-*.snap
+                  name: Neuron-nightly-snap
+                  path: release/Neuron-*.snap
             - name: upload pacman artifact
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-pacman
-                  path: release/Dopamine-*.pacman
+                  name: Neuron-nightly-pacman
+                  path: release/Neuron-*.pacman
 
     nightly_build_on_mac:
         runs-on: macos-11
@@ -78,8 +78,8 @@ jobs:
             - name: upload build artifacts
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-macos
-                  path: release/Dopamine-*.dmg
+                  name: Neuron-nightly-macos
+                  path: release/Neuron-*.dmg
 
     nightly_build_on_win:
         runs-on: windows-2019
@@ -103,5 +103,5 @@ jobs:
             - name: upload build artifacts
               uses: actions/upload-artifact@v2
               with:
-                  name: dopamine-nightly-win
-                  path: release\Dopamine-*.exe
+                  name: Neuron-nightly-win
+                  path: release\Neuron-*.exe

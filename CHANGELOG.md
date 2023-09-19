@@ -1,4 +1,4 @@
-# Dopamine change log
+# Neuron change log
 
 All notable changes to this project will be documented in this file.
 
@@ -40,7 +40,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 -   Fixed a bug where albums weren't all displayed just after startup
--   Fixed "error: local database is inconsistent: name mismatch on package Dopamine-3.0.0" error on Arch based systems
+-   Fixed "error: local database is inconsistent: name mismatch on package Neuron-3.0.0" error on Arch based systems
 
 ## [3.0.0-preview.18] - 2022-11-13
 
@@ -263,7 +263,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
--   Instead of crashing, Dopamine now fallbacks to a default theme when the current theme is invalid.
+-   Instead of crashing, Neuron now fallbacks to a default theme when the current theme is invalid.
 -   Search bar does not work when 'Use system title bar' setting is disabled
 -   Artists and genres break off without ellipsis when the artists and genres columns are too narrow
 -   Paginating does not work on Collection, Settings and Information tabs when the window is too narrow.
@@ -292,7 +292,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
--   It is now possible to associate audio files to Dopamine and play them with Dopamine from the file manager
+-   It is now possible to associate audio files to Neuron and play them with Neuron from the file manager
 -   It is now possible to create custom themes
 -   Added Manjaro light and dark theme
 -   Added Ubuntu light and dark theme
@@ -345,7 +345,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Fixed a bug that caused duplicate artists in the Artists screen
 -   Fixed a bug that caused duplicate genres in the Genres screen
 -   Fixed incorrect color of chevron text in Artists and Genres screens when using the light theme
--   Fixed a bug where the Dopamine 2 shortcut in Windows is overwritten and points to Dopamine 3 after installing Dopamine 3
+-   Fixed a bug where the Neuron 2 shortcut in Windows is overwritten and points to Neuron 3 after installing Neuron 3
 
 ## [3.0.0-preview.1] - 2021-06-30
 

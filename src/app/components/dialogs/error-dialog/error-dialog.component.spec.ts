@@ -17,10 +17,10 @@ describe('ErrorDialogComponent', () => {
         desktopMock = Mock.ofType<Desktop>();
         fileAccessMock = Mock.ofType<FileAccess>();
 
-        fileAccessMock.setup((x) => x.applicationDataDirectory()).returns(() => '/home/.config/Dopamine');
+        fileAccessMock.setup((x) => x.applicationDataDirectory()).returns(() => '/home/.config/Neuron');
         fileAccessMock
-            .setup((x) => x.combinePath(['/home/.config/Dopamine', 'logs', 'Dopamine.log']))
-            .returns(() => '/home/.config/Dopamine/logs/Dopamine.log');
+            .setup((x) => x.combinePath(['/home/.config/Neuron', 'logs', 'Neuron.log']))
+            .returns(() => '/home/.config/Neuron/logs/Neuron.log');
 
         component = new ErrorDialogComponent(It.isAny(), dialogRefMock.object, desktopMock.object, fileAccessMock.object);
     });
@@ -39,7 +39,7 @@ describe('ErrorDialogComponent', () => {
     describe('viewLog', () => {
         it('should open the log file', () => {
             // Arrange
-            const logFilePath: string = '/home/.config/Dopamine/logs/Dopamine.log';
+            const logFilePath: string = '/home/.config/Neuron/logs/Neuron.log';
 
             // Act
             component.viewLog();

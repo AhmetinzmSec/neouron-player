@@ -17,7 +17,7 @@ app.commandLine.appendSwitch('disable-http-cache'); // Disables clearing of the 
  * Logging
  */
 log.create('main');
-log.transports.file.resolvePath = () => path.join(app.getPath('userData'), 'logs', 'Dopamine.log');
+log.transports.file.resolvePath = () => path.join(app.getPath('userData'), 'logs', 'Neuron.log');
 
 /**
  * Variables
@@ -261,7 +261,7 @@ try {
 
             if (shouldShowIconInNotificationArea()) {
                 tray = new Tray(getTrayIcon());
-                tray.setToolTip('Dopamine');
+                tray.setToolTip('Neuron');
             }
         });
 
@@ -280,7 +280,7 @@ try {
 
             const contextMenu = Menu.buildFromTemplate([
                 {
-                    label: arg.showDopamineLabel,
+                    label: arg.showNeuronLabel,
                     click(): void {
                         mainWindow.show();
                         mainWindow.focus();

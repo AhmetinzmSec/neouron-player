@@ -9,7 +9,7 @@ describe('ContactInformation', () => {
             const donateUrl: string = ContactInformation.donateUrl;
 
             // Assert
-            expect(donateUrl).toEqual('https://digimezzo.github.io/site/donate');
+            expect(donateUrl).toEqual('https://hackadia.github.io/site/donate');
         });
     });
 
@@ -21,7 +21,7 @@ describe('ContactInformation', () => {
             const websiteUrl: string = ContactInformation.websiteUrl;
 
             // Assert
-            expect(websiteUrl).toEqual('https://digimezzo.github.io/site');
+            expect(websiteUrl).toEqual('https://hackadia.github.io/site');
         });
     });
 
@@ -33,7 +33,7 @@ describe('ContactInformation', () => {
             const twitterUrl: string = ContactInformation.twitterUrl;
 
             // Assert
-            expect(twitterUrl).toEqual('https://twitter.com/digimezzo');
+            expect(twitterUrl).toEqual('https://twitter.com/hackadia');
         });
     });
 
@@ -45,7 +45,7 @@ describe('ContactInformation', () => {
             const githubUrl: string = ContactInformation.githubUrl;
 
             // Assert
-            expect(githubUrl).toEqual('https://github.com/digimezzo');
+            expect(githubUrl).toEqual('https://github.com/hackadia');
         });
     });
 });

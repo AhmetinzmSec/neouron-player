@@ -253,27 +253,27 @@ describe('AppearanceService', () => {
     function resetFileAccessMock(): void {
         fileAccessMock.reset();
         fileAccessMock
-            .setup((x) => x.getFilesInDirectory('/home/user/.config/Dopamine/Themes'))
-            .returns(() => ['/home/user/.config/Dopamine/Themes/Theme 1.theme', '/home/user/.config/Dopamine/Themes/Theme 2.theme']);
-        fileAccessMock.setup((x) => x.applicationDataDirectory()).returns(() => '/home/user/.config/Dopamine');
+            .setup((x) => x.getFilesInDirectory('/home/user/.config/Neuron/Themes'))
+            .returns(() => ['/home/user/.config/Neuron/Themes/Theme 1.theme', '/home/user/.config/Neuron/Themes/Theme 2.theme']);
+        fileAccessMock.setup((x) => x.applicationDataDirectory()).returns(() => '/home/user/.config/Neuron');
         fileAccessMock
-            .setup((x) => x.combinePath(['/home/user/.config/Dopamine', 'Themes']))
-            .returns(() => '/home/user/.config/Dopamine/Themes');
+            .setup((x) => x.combinePath(['/home/user/.config/Neuron', 'Themes']))
+            .returns(() => '/home/user/.config/Neuron/Themes');
 
         fileAccessMock
-            .setup((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 1.theme'))
+            .setup((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 1.theme'))
             .returns(() => JSON.stringify(theme1));
 
         fileAccessMock
-            .setup((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 2.theme'))
+            .setup((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 2.theme'))
             .returns(() => JSON.stringify(theme2));
 
         fileAccessMock
-            .setup((x) => x.combinePath(['/home/user/.config/Dopamine/Themes', 'Theme 1.theme']))
-            .returns(() => '/home/user/.config/Dopamine/Themes/Theme 1.theme');
+            .setup((x) => x.combinePath(['/home/user/.config/Neuron/Themes', 'Theme 1.theme']))
+            .returns(() => '/home/user/.config/Neuron/Themes/Theme 1.theme');
         fileAccessMock
-            .setup((x) => x.combinePath(['/home/user/.config/Dopamine/Themes', 'Theme 2.theme']))
-            .returns(() => '/home/user/.config/Dopamine/Themes/Theme 2.theme');
+            .setup((x) => x.combinePath(['/home/user/.config/Neuron/Themes', 'Theme 2.theme']))
+            .returns(() => '/home/user/.config/Neuron/Themes/Theme 2.theme');
     }
 
     function resetDefaultThemesCreatorMock(): void {
@@ -357,7 +357,7 @@ describe('AppearanceService', () => {
             const service: BaseAppearanceService = createService();
 
             // Assert
-            expect(service.themesDirectoryPath).toEqual('/home/user/.config/Dopamine/Themes');
+            expect(service.themesDirectoryPath).toEqual('/home/user/.config/Neuron/Themes');
         });
 
         it('should ensure that the themes directory exists', () => {
@@ -367,7 +367,7 @@ describe('AppearanceService', () => {
             const service: BaseAppearanceService = createService();
 
             // Assert
-            fileAccessMock.verify((x) => x.createFullDirectoryPathIfDoesNotExist('/home/user/.config/Dopamine/Themes'), Times.once());
+            fileAccessMock.verify((x) => x.createFullDirectoryPathIfDoesNotExist('/home/user/.config/Neuron/Themes'), Times.once());
         });
 
         it('should ensure that the default themes exist', () => {
@@ -384,12 +384,12 @@ describe('AppearanceService', () => {
 
             fileAccessMock.verify(
                 (x) =>
-                    x.writeToFile('/home/user/.config/Dopamine/Themes/Theme 1.theme', JSON.stringify(theme1WithoutIsBroken, undefined, 2)),
+                    x.writeToFile('/home/user/.config/Neuron/Themes/Theme 1.theme', JSON.stringify(theme1WithoutIsBroken, undefined, 2)),
                 Times.once()
             );
             fileAccessMock.verify(
                 (x) =>
-                    x.writeToFile('/home/user/.config/Dopamine/Themes/Theme 2.theme', JSON.stringify(theme2WithoutIsBroken, undefined, 2)),
+                    x.writeToFile('/home/user/.config/Neuron/Themes/Theme 2.theme', JSON.stringify(theme2WithoutIsBroken, undefined, 2)),
                 Times.once()
             );
         });
@@ -401,9 +401,9 @@ describe('AppearanceService', () => {
             const service: BaseAppearanceService = createService();
 
             // Assert
-            fileAccessMock.verify((x) => x.getFilesInDirectory('/home/user/.config/Dopamine/Themes'), Times.once());
-            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 1.theme'), Times.once());
-            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 2.theme'), Times.once());
+            fileAccessMock.verify((x) => x.getFilesInDirectory('/home/user/.config/Neuron/Themes'), Times.once());
+            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 1.theme'), Times.once());
+            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 2.theme'), Times.once());
         });
 
         it('should set the selected theme from the settings', () => {
@@ -943,7 +943,7 @@ describe('AppearanceService', () => {
             const themesDirectoryPath: string = service.themesDirectoryPath;
 
             // Assert
-            expect(themesDirectoryPath).toEqual('/home/user/.config/Dopamine/Themes');
+            expect(themesDirectoryPath).toEqual('/home/user/.config/Neuron/Themes');
         });
     });
 
@@ -964,12 +964,12 @@ describe('AppearanceService', () => {
 
             fileAccessMock.verify(
                 (x) =>
-                    x.writeToFile('/home/user/.config/Dopamine/Themes/Theme 1.theme', JSON.stringify(theme1WithoutIsBroken, undefined, 2)),
+                    x.writeToFile('/home/user/.config/Neuron/Themes/Theme 1.theme', JSON.stringify(theme1WithoutIsBroken, undefined, 2)),
                 Times.once()
             );
             fileAccessMock.verify(
                 (x) =>
-                    x.writeToFile('/home/user/.config/Dopamine/Themes/Theme 2.theme', JSON.stringify(theme2WithoutIsBroken, undefined, 2)),
+                    x.writeToFile('/home/user/.config/Neuron/Themes/Theme 2.theme', JSON.stringify(theme2WithoutIsBroken, undefined, 2)),
                 Times.once()
             );
         });
@@ -983,9 +983,9 @@ describe('AppearanceService', () => {
             service.refreshThemes();
 
             // Assert
-            fileAccessMock.verify((x) => x.getFilesInDirectory('/home/user/.config/Dopamine/Themes'), Times.once());
-            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 1.theme'), Times.once());
-            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Dopamine/Themes/Theme 2.theme'), Times.once());
+            fileAccessMock.verify((x) => x.getFilesInDirectory('/home/user/.config/Neuron/Themes'), Times.once());
+            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 1.theme'), Times.once());
+            fileAccessMock.verify((x) => x.getFileContentAsString('/home/user/.config/Neuron/Themes/Theme 2.theme'), Times.once());
         });
 
         it('should set the selected theme from the settings', () => {

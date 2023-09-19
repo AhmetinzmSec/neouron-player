@@ -41,7 +41,7 @@ describe('DiscordService', () => {
 
         translatorServiceMock.setup((x) => x.get('playing')).returns(() => 'Playing');
         translatorServiceMock.setup((x) => x.get('paused')).returns(() => 'Paused');
-        translatorServiceMock.setup((x) => x.get('playing-with-dopamine')).returns(() => 'Playing with Dopamine');
+        translatorServiceMock.setup((x) => x.get('playing-with-Neuron')).returns(() => 'Playing with Neuron');
 
         const track: Track = new Track('path');
         track.trackTitle = 'title';
@@ -131,7 +131,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -151,7 +151,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -172,7 +172,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Dopamine', false, 0, 0),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Neuron', false, 0, 0),
                 Times.once()
             );
         });
@@ -193,7 +193,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -214,7 +214,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -235,7 +235,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Dopamine', false, 0, 0),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Neuron', false, 0, 0),
                 Times.once()
             );
         });
@@ -461,7 +461,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -479,7 +479,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -497,7 +497,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Dopamine', false, 0, 0),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Neuron', false, 0, 0),
                 Times.once()
             );
         });
@@ -515,7 +515,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -533,7 +533,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Dopamine', true, 10, 100010),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'play', 'Playing', 'icon', 'Playing with Neuron', true, 10, 100010),
                 Times.once()
             );
         });
@@ -551,7 +551,7 @@ describe('DiscordService', () => {
 
             // Assert
             presenceUpdaterMock.verify(
-                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Dopamine', false, 0, 0),
+                (x) => x.updatePresence('title', 'artist1, artist2', 'pause', 'Paused', 'icon', 'Playing with Neuron', false, 0, 0),
                 Times.once()
             );
         });

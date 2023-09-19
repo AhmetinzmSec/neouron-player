@@ -12,7 +12,7 @@ describe('PlaylistFolderModelFactory', () => {
         translatorServiceMock = Mock.ofType<BaseTranslatorService>();
         translatorServiceMock.setup((x) => x.get('unsorted')).returns(() => 'Unsorted');
         fileAccessMock = Mock.ofType<BaseFileAccess>();
-        fileAccessMock.setup((x) => x.getDirectoryOrFileName('/home/username/Music/Dopamine/Playlists/Folder 1')).returns(() => 'Folder 1');
+        fileAccessMock.setup((x) => x.getDirectoryOrFileName('/home/username/Music/Neuron/Playlists/Folder 1')).returns(() => 'Folder 1');
     });
 
     describe('constructor', () => {
@@ -40,12 +40,12 @@ describe('PlaylistFolderModelFactory', () => {
 
             // Act
             const playlistFolderModel: PlaylistFolderModel = playlistFolderModelFactory.create(
-                '/home/username/Music/Dopamine/Playlists/Folder 1'
+                '/home/username/Music/Neuron/Playlists/Folder 1'
             );
 
             // Assert
             expect(playlistFolderModel.name).toEqual('Folder 1');
-            expect(playlistFolderModel.path).toEqual('/home/username/Music/Dopamine/Playlists/Folder 1');
+            expect(playlistFolderModel.path).toEqual('/home/username/Music/Neuron/Playlists/Folder 1');
             expect(playlistFolderModel.isModifiable).toBeTruthy();
         });
     });
@@ -60,12 +60,12 @@ describe('PlaylistFolderModelFactory', () => {
 
             // Act
             const playlistFolderModel: PlaylistFolderModel = playlistFolderModelFactory.createUnsorted(
-                '/home/username/Music/Dopamine/Playlists'
+                '/home/username/Music/Neuron/Playlists'
             );
 
             // Assert
             expect(playlistFolderModel.name).toEqual('Unsorted');
-            expect(playlistFolderModel.path).toEqual('/home/username/Music/Dopamine/Playlists');
+            expect(playlistFolderModel.path).toEqual('/home/username/Music/Neuron/Playlists');
             expect(playlistFolderModel.isModifiable).toBeFalsy();
         });
     });

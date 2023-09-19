@@ -17,7 +17,7 @@ electron_1.app.commandLine.appendSwitch('disable-http-cache'); // Disables clear
  * Logging
  */
 electron_log_1.default.create('main');
-electron_log_1.default.transports.file.resolvePath = () => path.join(electron_1.app.getPath('userData'), 'logs', 'Dopamine.log');
+electron_log_1.default.transports.file.resolvePath = () => path.join(electron_1.app.getPath('userData'), 'logs', 'Neuron.log');
 /**
  * Variables
  */
@@ -221,7 +221,7 @@ try {
             });
             if (shouldShowIconInNotificationArea()) {
                 tray = new electron_1.Tray(getTrayIcon());
-                tray.setToolTip('Dopamine');
+                tray.setToolTip('Neuron');
             }
         });
         electron_1.nativeTheme.on('updated', () => {
@@ -236,7 +236,7 @@ try {
             }
             const contextMenu = electron_1.Menu.buildFromTemplate([
                 {
-                    label: arg.showDopamineLabel,
+                    label: arg.showNeuronLabel,
                     click() {
                         mainWindow.show();
                         mainWindow.focus();

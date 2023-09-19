@@ -614,7 +614,7 @@ export class Settings implements BaseSettings {
         }
 
         if (!this.settings.has('theme')) {
-            this.settings.set('theme', 'Dopamine');
+            this.settings.set('theme', 'Neuron');
         }
 
         if (!this.settings.has('showWelcome')) {

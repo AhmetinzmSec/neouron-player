@@ -15,7 +15,7 @@ export class ClauseCreator {
     public static createNumericInClause(columnName: string, clauseItems: number[]): string {
         const commaSeparatedItems: string = clauseItems.join(',');
 
-        return `${columnName} IN (${commaSeparatedItems})`;
+        return `${columnName} In (${commaSeparatedItems})`;
     }
 
     public static createOrLikeClause(columnName: string, clauseItems: string[], delimiter: string): string {

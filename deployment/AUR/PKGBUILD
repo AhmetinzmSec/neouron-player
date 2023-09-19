@@ -1,11 +1,11 @@
-# Maintainer: Digimezzo <digimezzo@outlook.com>
-_pkgname=Dopamine
-pkgname=dopamine
+# Maintainer: hackadia <hackadia@outlook.com>
+_pkgname=Neuron
+pkgname=Neuron
 pkgver=3.0.0
 pkgrel=1
 pkgdesc="The audio player that keeps it simple"
 arch=('x86_64')
-url="https://digimezzo.github.io/site/"
+url="https://hackadia.github.io/site/"
 license=('GPL3')
 provides=(${pkgname})
 conflicts=(${pkgname})
@@ -14,7 +14,7 @@ depends=()
 makedepends=('coreutils')
 backup=()
 options=(!strip)
-source=("${_pkgname}-${pkgver}.AppImage::https://github.com/digimezzo/${pkgname}/releases/download/v${pkgver//_/-}/${_pkgname}-${pkgver}.AppImage"
+source=("${_pkgname}-${pkgver}.AppImage::https://github.com/hackadia/${pkgname}/releases/download/v${pkgver//_/-}/${_pkgname}-${pkgver}.AppImage"
 	"${pkgname}.desktop")
 sha256sums=('TODO'
 		'TODO')

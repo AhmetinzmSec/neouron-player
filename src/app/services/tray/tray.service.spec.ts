@@ -20,7 +20,7 @@ describe('TrayService', () => {
         translateServiceProxyLanguageChanged = new Subject();
         const translateServiceProxyLanguageChanged$: Observable<void> = translateServiceProxyLanguageChanged.asObservable();
 
-        translatorServiceMock.setup((x) => x.get('show-dopamine')).returns(() => 'Show Dopamine');
+        translatorServiceMock.setup((x) => x.get('show-Neuron')).returns(() => 'Show Neuron');
         translatorServiceMock.setup((x) => x.get('exit')).returns(() => 'Exit');
         translatorServiceMock.setup((x) => x.languageChanged$).returns(() => translateServiceProxyLanguageChanged$);
     });
@@ -45,7 +45,7 @@ describe('TrayService', () => {
         it('should update the tray context menu', () => {
             // Arrange
             const arg: any = {
-                showDopamineLabel: 'Show Dopamine',
+                showNeuronLabel: 'Show Neuron',
                 exitLabel: 'Exit',
             };
 
@@ -59,7 +59,7 @@ describe('TrayService', () => {
         it('should trigger update the tray context menu on language changed', () => {
             // Arrange
             const arg: any = {
-                showDopamineLabel: 'Show Dopamine',
+                showNeuronLabel: 'Show Neuron',
                 exitLabel: 'Exit',
             };
 
@@ -78,7 +78,7 @@ describe('TrayService', () => {
         it('should update the tray context menu', () => {
             // Arrange
             const arg: any = {
-                showDopamineLabel: 'Show Dopamine',
+                showNeuronLabel: 'Show Neuron',
                 exitLabel: 'Exit',
             };
 

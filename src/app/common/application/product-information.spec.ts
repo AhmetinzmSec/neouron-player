@@ -9,7 +9,7 @@ describe('ProductInformation', () => {
             const applicationName: string = ProductInformation.applicationName;
 
             // Assert
-            expect(applicationName).toEqual('Dopamine');
+            expect(applicationName).toEqual('Neuron');
         });
     });
 
@@ -33,7 +33,7 @@ describe('ProductInformation', () => {
             const applicationCopyright: string = ProductInformation.applicationCopyright;
 
             // Assert
-            expect(applicationCopyright).toEqual('Copyright Digimezzo Ⓒ 2014 - 2023');
+            expect(applicationCopyright).toEqual('Copyright hackadia Ⓒ 2014 - 2023');
         });
     });
 });

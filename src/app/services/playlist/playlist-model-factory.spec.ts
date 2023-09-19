@@ -19,18 +19,18 @@ describe('PlaylistModelFactory', () => {
 
         fileAccessMock = Mock.ofType<BaseFileAccess>();
         fileAccessMock
-            .setup((x) => x.getDirectoryPath('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u'))
-            .returns(() => '/home/username/Music/Dopamine/Playlists/Folder 1');
+            .setup((x) => x.getDirectoryPath('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u'))
+            .returns(() => '/home/username/Music/Neuron/Playlists/Folder 1');
         fileAccessMock
-            .setup((x) => x.getDirectoryPath('/home/username/Music/Dopamine/Playlists/Playlist 1.m3u'))
-            .returns(() => '/home/username/Music/Dopamine/Playlists');
+            .setup((x) => x.getDirectoryPath('/home/username/Music/Neuron/Playlists/Playlist 1.m3u'))
+            .returns(() => '/home/username/Music/Neuron/Playlists');
         fileAccessMock
-            .setup((x) => x.getFileNameWithoutExtension('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u'))
+            .setup((x) => x.getFileNameWithoutExtension('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u'))
             .returns(() => 'Playlist 1');
         fileAccessMock
-            .setup((x) => x.getFileNameWithoutExtension('/home/username/Music/Dopamine/Playlists/Playlist 1.m3u'))
+            .setup((x) => x.getFileNameWithoutExtension('/home/username/Music/Neuron/Playlists/Playlist 1.m3u'))
             .returns(() => 'Playlist 1');
-        fileAccessMock.setup((x) => x.getDirectoryOrFileName('/home/username/Music/Dopamine/Playlists/Folder 1')).returns(() => 'Folder 1');
+        fileAccessMock.setup((x) => x.getDirectoryOrFileName('/home/username/Music/Neuron/Playlists/Folder 1')).returns(() => 'Folder 1');
     });
 
     describe('constructor', () => {
@@ -50,22 +50,22 @@ describe('PlaylistModelFactory', () => {
             // Arrange
             const playlistModelFactory: PlaylistModelFactory = createFactory();
             fileAccessMock
-                .setup((x) => x.pathExists('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.png'))
+                .setup((x) => x.pathExists('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.png'))
                 .returns(() => false);
 
             // Act
             const playlistModel: PlaylistModel = playlistModelFactory.create(
-                '/home/username/Music/Dopamine/Playlists',
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u',
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
+                '/home/username/Music/Neuron/Playlists',
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u',
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
             );
 
             // Assert
             expect(playlistModel.name).toEqual('Playlist 1');
             expect(playlistModel.folderName).toEqual('Folder 1');
-            expect(playlistModel.path).toEqual('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u');
+            expect(playlistModel.path).toEqual('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u');
             expect(playlistModel.imagePath).toEqual(
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
             );
         });
 
@@ -73,20 +73,20 @@ describe('PlaylistModelFactory', () => {
             // Arrange
             const playlistModelFactory: PlaylistModelFactory = createFactory();
             fileAccessMock
-                .setup((x) => x.pathExists('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.png'))
+                .setup((x) => x.pathExists('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.png'))
                 .returns(() => true);
 
             // Act
             const playlistModel: PlaylistModel = playlistModelFactory.create(
-                '/home/username/Music/Dopamine/Playlists',
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u',
+                '/home/username/Music/Neuron/Playlists',
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u',
                 undefined
             );
 
             // Assert
             expect(playlistModel.name).toEqual('Playlist 1');
             expect(playlistModel.folderName).toEqual('Folder 1');
-            expect(playlistModel.path).toEqual('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u');
+            expect(playlistModel.path).toEqual('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u');
             expect(playlistModel.imagePath).toEqual(Constants.emptyImage);
         });
 
@@ -94,41 +94,41 @@ describe('PlaylistModelFactory', () => {
             // Arrange
             const playlistModelFactory: PlaylistModelFactory = createFactory();
             fileAccessMock
-                .setup((x) => x.pathExists('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.png'))
+                .setup((x) => x.pathExists('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.png'))
                 .returns(() => true);
 
             // Act
             const playlistModel: PlaylistModel = playlistModelFactory.create(
-                '/home/username/Music/Dopamine/Playlists',
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u',
+                '/home/username/Music/Neuron/Playlists',
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u',
                 ''
             );
 
             // Assert
             expect(playlistModel.name).toEqual('Playlist 1');
             expect(playlistModel.folderName).toEqual('Folder 1');
-            expect(playlistModel.path).toEqual('/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1.m3u');
+            expect(playlistModel.path).toEqual('/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1.m3u');
             expect(playlistModel.imagePath).toEqual(Constants.emptyImage);
         });
 
         it('should create a PlaylistFolderModel with Unsorted folderName if playlistPath equals playlistsParentFolderPath', () => {
             // Arrange
             const playlistModelFactory: PlaylistModelFactory = createFactory();
-            fileAccessMock.setup((x) => x.pathExists('/home/username/Music/Dopamine/Playlists/Playlist 1.png')).returns(() => true);
+            fileAccessMock.setup((x) => x.pathExists('/home/username/Music/Neuron/Playlists/Playlist 1.png')).returns(() => true);
 
             // Act
             const playlistModel: PlaylistModel = playlistModelFactory.create(
-                '/home/username/Music/Dopamine/Playlists',
-                '/home/username/Music/Dopamine/Playlists/Playlist 1.m3u',
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
+                '/home/username/Music/Neuron/Playlists',
+                '/home/username/Music/Neuron/Playlists/Playlist 1.m3u',
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
             );
 
             // Assert
             expect(playlistModel.name).toEqual('Playlist 1');
             expect(playlistModel.folderName).toEqual('Unsorted');
-            expect(playlistModel.path).toEqual('/home/username/Music/Dopamine/Playlists/Playlist 1.m3u');
+            expect(playlistModel.path).toEqual('/home/username/Music/Neuron/Playlists/Playlist 1.m3u');
             expect(playlistModel.imagePath).toEqual(
-                '/home/username/Music/Dopamine/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
+                '/home/username/Music/Neuron/Playlists/Folder 1/Playlist 1-d79a5db9-daaf-4c3c-8f94-ea5e56b7245d.png'
             );
         });
     });

@@ -28,7 +28,7 @@ export class UpdateService implements BaseUpdateService {
             try {
                 const currentRelease: string = ProductInformation.applicationVersion;
                 const latestRelease: string = await this.gitHub.getLatestReleaseAsync(
-                    'digimezzo',
+                    'hackadia',
                     ProductInformation.applicationName.toLowerCase(),
                     this.settings.checkForUpdatesIncludesPreReleases
                 );
@@ -61,7 +61,7 @@ export class UpdateService implements BaseUpdateService {
 
     public downloadLatestRelease(): void {
         this.desktop.openLink(
-            `https://github.com/digimezzo/${ProductInformation.applicationName.toLowerCase()}/releases/tag/v${this.latestRelease}`
+            `https://github.com/hackadia/${ProductInformation.applicationName.toLowerCase()}/releases/tag/v${this.latestRelease}`
         );
     }
 }

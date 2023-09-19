@@ -7,7 +7,7 @@ export class DatabaseFactory {
     constructor(private fileAccess: BaseFileAccess) {}
 
     public create(): any {
-        const databaseFile: string = this.fileAccess.combinePath([this.fileAccess.applicationDataDirectory(), 'Dopamine.db']);
+        const databaseFile: string = this.fileAccess.combinePath([this.fileAccess.applicationDataDirectory(), 'Neuron.db']);
         const database: any = new Database(databaseFile);
 
         return database;

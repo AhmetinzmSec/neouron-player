@@ -208,7 +208,7 @@ export class AppearanceService implements BaseAppearanceService {
             this.applyTheme();
         } catch (e) {
             this.selectedTheme.isBroken = true;
-            this.settings.theme = 'Dopamine';
+            this.settings.theme = 'Neuron';
             this.setSelectedThemeFromSettings();
             this.applyTheme();
             const fallbackThemeName: string = this.selectedTheme.name;
@@ -337,7 +337,7 @@ export class AppearanceService implements BaseAppearanceService {
         let themeFromSettings: Theme = this.themes.find((x) => x.name === this.settings.theme);
 
         if (themeFromSettings == undefined) {
-            themeFromSettings = this.themes.find((x) => x.name === 'Dopamine');
+            themeFromSettings = this.themes.find((x) => x.name === 'Neuron');
 
             if (themeFromSettings == undefined) {
                 themeFromSettings = this.themes[0];

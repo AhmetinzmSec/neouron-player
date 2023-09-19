@@ -99,7 +99,7 @@ export class DiscordService implements BaseDiscordService {
         let smallImageKey: string = 'pause';
         let smallImageText: string = this.translatorService.get('paused');
         const largeImageKey: string = 'icon';
-        const largeImageText: string = this.translatorService.get('playing-with-dopamine');
+        const largeImageText: string = this.translatorService.get('playing-with-Neuron');
         let startTime: number = 0;
         let endTime: number = 0;
         let shouldSendTimestamps: boolean = false;
