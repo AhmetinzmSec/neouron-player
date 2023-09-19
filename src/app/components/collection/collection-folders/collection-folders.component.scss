@@ -1,5 +1,6 @@
 .subfolder {
     height: 28px;
+    border-radius: 10px;
 }
 
 .subfolder:hover {
@@ -19,7 +20,7 @@
 
 .tracks-browser__breadcrumb {
     background-color: var(--theme-breadcrumb-background) !important;
-    border-radius: 4px !important;
+    border-radius: 10px !important;
     min-height: 26px !important;
     padding: 2px 8px !important;
     font-size: var(--fontsize-normal) !important;

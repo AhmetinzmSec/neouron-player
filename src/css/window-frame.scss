@@ -38,6 +38,7 @@
 }
 
 .window-frame__content {
+    box-shadow: 0px 0px 5px 0px #28282b;
     position: absolute;
     top: $titlebar-height;
     bottom: 0;

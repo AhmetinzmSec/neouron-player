@@ -3,41 +3,51 @@
 // Background color
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-app-background {
+    border-radius: 10px;
     background-color: var(--theme-main-background) !important;
 }
 .mat-drawer-container {
+    border-radius: 10px;
     background-color: var(--theme-main-background) !important;
 }
 
 .mat-drawer {
+    border-radius: 10px;
     background-color: var(--theme-side-pane-background) !important;
 }
 
 .mat-menu-panel {
+    border-radius: 10px;
     background-color: var(--theme-dialog-background) !important;
 }
 
 .mat-dialog-container {
+    border-radius: 10px;
     background-color: var(--theme-dialog-background) !important;
 }
 .mat-select-panel {
+    border-radius: 10px;
     background-color: var(--theme-dialog-background) !important;
 }
 
 .mat-option:hover {
+    border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.06) !important;
 }
 
 .mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+    border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.1) !important;
 }
 .mat-menu-item:hover {
+    border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.06) !important;
 }
 
 // Text color
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-menu-item {
+    border-radius: 10px;
     color: var(--theme-primary-text) !important;
 }
 
@@ -105,6 +115,7 @@
 // Form
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-form-field-underline {
+    border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.42) !important;
 }
 
@@ -119,6 +130,7 @@
 // Menu
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-menu-item {
+    border-radius: 10px;
     font-size: var(--fontsize-normal) !important;
     height: unset !important;
     line-height: unset !important;
@@ -126,6 +138,7 @@
 }
 
 .mat-menu-panel {
+    border-radius: 10px;
     min-height: unset !important;
     min-width: fit-content !important;
 }
@@ -141,6 +154,7 @@
 // Progress bar
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-progress-bar-buffer {
+    border-radius: 10px;
     background-color: var(--theme-slider-background) !important;
     opacity: 0.2 !important;
 }
@@ -150,20 +164,24 @@
 }
 
 .mat-progress-bar-fill::after {
+    border-radius: 10px;
     background-color: var(--theme-accent-color) !important;
 }
 
 // Slide toggle
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-slide-toggle-bar {
+    border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.38) !important;
 }
 
 .mat-slide-toggle-thumb {
+    border-radius: 10px;
     background-color: #b0b0b0 !important;
 }
 
 .mat-checked .mat-slide-toggle-thumb {
+    border-radius: 10px;
     background-color: var(--theme-accent-color) !important;
 }
 
@@ -174,6 +192,7 @@
 }
 
 .mat-slider-track-background {
+    border-radius: 10px;
     background-color: var(--theme-slider-background) !important;
     opacity: 0.2 !important;
     transform: unset !important;
@@ -240,11 +259,13 @@
 // Tab
 // -----------------------------------------------------------------------------------------------------------------------------------------
 mat-tab-group {
+    border-radius: 10px;
     height: 100%;
     width: 100%;
 }
 
 .mat-tab-body-content {
+    border-radius: 10px;
     // Prevents showing of horizontal scrollbar when switching tabs (might be related to cdk virtual scroll)
     // Found on: https://github.com/angular/components/issues/6104
     &.ng-animating {
@@ -253,11 +274,13 @@ mat-tab-group {
 }
 
 .mat-tab-body-wrapper {
+    border-radius: 10px;
     flex-grow: 1;
     width: 100%;
 }
 
 .mat-tab-label {
+    border-radius: 10px;
     min-width: 0 !important;
     user-select: none; // Prevents accidental selection of the header text
     padding: 0 12px !important;
@@ -267,15 +290,18 @@ mat-tab-group {
 }
 
 .mat-tab-label-container {
+    border-radius: 10px;
     align-self: flex-end; // Fixes an alignment issue when opening the development tools
 }
 
 .mat-tab-label-content {
+    border-radius: 10px;
     font-size: var(--fontsize-medium) !important;
     color: var(--theme-tab-text) !important;
 }
 
 .mat-tab-label-active .mat-tab-label-content {
+    border-radius: 10px;
     color: var(--theme-selected-tab-text) !important;
 }
 
@@ -289,6 +315,7 @@ mat-tab-group {
 
 .mat-tab-header .cdk-focused,
 .mat-tab-header .cdk-keyboard-focused {
+    border-radius: 10px;
     background-color: transparent !important;
 }
 
@@ -302,6 +329,7 @@ mat-tab-group {
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-tooltip {
     font-size: var(--fontsize-normal) !important;
+    border-radius: 10px;
     background-color: var(--theme-accent-color) !important;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     word-break: break-all !important;

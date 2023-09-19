@@ -41,7 +41,7 @@ describe('DiscordService', () => {
 
         translatorServiceMock.setup((x) => x.get('playing')).returns(() => 'Playing');
         translatorServiceMock.setup((x) => x.get('paused')).returns(() => 'Paused');
-        translatorServiceMock.setup((x) => x.get('playing-with-Neuron')).returns(() => 'Playing with Neuron');
+        translatorServiceMock.setup((x) => x.get('playing-with-neuron')).returns(() => 'Playing with Neuron');
 
         const track: Track = new Track('path');
         track.trackTitle = 'title';

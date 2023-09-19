@@ -32,6 +32,7 @@ describe('DefaultThemesCreator', () => {
             expect(defaultThemes[3].name).toEqual('Naughty');
             expect(defaultThemes[4].name).toEqual('Ubuntu');
             expect(defaultThemes[5].name).toEqual('Catppuccin');
+            expect(defaultThemes[5].name).toEqual('Breeze');
             expect(defaultThemes[6].name).toEqual('Palenight');
         });
     });

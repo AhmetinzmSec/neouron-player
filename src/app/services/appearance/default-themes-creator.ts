@@ -16,7 +16,7 @@ export class DefaultThemesCreator {
         themes.push(this.createBeatsTheme());
         themes.push(this.createNaughtyTheme());
         themes.push(this.createUbuntuTheme());
-        themes.push(this.createManjaroTheme());
+        themes.push(this.createCatppuccinTheme());
         themes.push(this.createPalenightTheme());
 
         return themes;
@@ -362,7 +362,7 @@ export class DefaultThemesCreator {
         return new Theme('Ubuntu', this.creator, new ThemeCoreColors('#d94612', '#f9622d', '#e95420'), darkColors, lightColors, options);
     }
 
-    private createManjaroTheme(): Theme {
+    private createCatppuccinTheme(): Theme {
         const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
             'white', // windowButtonIcon
             'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
