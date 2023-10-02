@@ -1,9 +1,0 @@
-[Desktop Entry]
-Name=Neuron
-Exec=neuron
-Terminal=false
-Type=Application
-Icon=neuron
-StartupWMClass=Neuron
-Comment=The audio player that keeps it simple
-Categories=Utility;

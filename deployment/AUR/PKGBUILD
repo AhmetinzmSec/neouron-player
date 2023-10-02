@@ -1,6 +1,6 @@
 # Maintainer: hackadia <hackadia@outlook.com>
 _pkgname=Neuron
-pkgname=Neuron
+pkgname=neuron
 pkgver=3.0.0
 pkgrel=1
 pkgdesc="The audio player that keeps it simple"
