@@ -1,7 +1,7 @@
 {
     "name": "Neuron",
     "version": "3.0.0",
-    "versionSuffix": "preview.21",
+    "versionSuffix": "alpha.pre-1",
     "copyright": "Copyright Hackadia Ⓒ 2023",
     "description": "Audio player",
     "homepage": "https://github.com/hackadia/neuron",
@@ -75,7 +75,7 @@
         "zone.js": "0.11.4"
     },
     "engines": {
-        "node": ">=16.0.0 <20.0.0"
+        "node": ">=16.0.0"
     },
     "dependencies": {
         "@angular/animations": "15.2.9",

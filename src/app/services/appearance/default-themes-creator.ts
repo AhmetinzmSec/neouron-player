@@ -17,7 +17,8 @@ export class DefaultThemesCreator {
         themes.push(this.createNaughtyTheme());
         themes.push(this.createUbuntuTheme());
         themes.push(this.createCatppuccinTheme());
-        themes.push(this.createPalenightTheme());
+        themes.push(this.createGruvboxTheme());
+        themes.push(this.createCatppuccinMojaveTheme());
 
         return themes;
     }
@@ -87,7 +88,7 @@ export class DefaultThemesCreator {
 
         const options: ThemeOptions = new ThemeOptions(false);
 
-        return new Theme('Neuron', this.creator, new ThemeCoreColors('#6260e3', '#3fdcdd', '#4883e0'), darkColors, lightColors, options);
+        return new Theme('Neuron Default', this.creator, new ThemeCoreColors('#6260e3', '#3fdcdd', '#4883e0'), darkColors, lightColors, options);
     }
 
     private createZuneTheme(): Theme {
@@ -362,6 +363,146 @@ export class DefaultThemesCreator {
         return new Theme('Ubuntu', this.creator, new ThemeCoreColors('#d94612', '#f9622d', '#e95420'), darkColors, lightColors, options);
     }
 
+
+    private createGruvboxTheme(): Theme {
+        const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
+            'white', // windowButtonIcon
+            'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
+            'rgba(255, 255, 255, 0.1)', // selectedItemBackground
+            '#818181', // tabText
+            'white', // selectedTabText
+            '#242424', // mainBackground
+            '#282828', // headerBackground
+            '#282828', // footerBackground
+            '#282828', // sidePaneBackground
+            'white', // primaryText
+            '#818181', // secondaryText
+            '#373737', // breadcrumbBackground
+            '#999', // sliderBackground
+            'white', // sliderThumbBackground
+            '#5e5e5e', // albumCoverLogo
+            '#272727', // albumCoverBackground
+            '#1b1b1b', // paneSeparators
+            '#1b1b1b', // settingsSeparators
+            '#1b1b1b', // contextMenuSeparators
+            '#7a7a79', // scrollBars
+            '#242424', // searchBox
+            '#fff', // searchBoxText
+            '#fff', // searchBoxIcon
+            '#282828', // dialogBackground
+            '#fff', // primaryButtonText
+            '#595959', // secondaryButtonBackground
+            '#fff', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const lightColors: ThemeNeutralColors = new ThemeNeutralColors(
+            'black', // windowButtonIcon
+            'rgba(0, 0, 0, 0.05)', // hoveredItemBackground
+            'rgba(0, 0, 0, 0.1)', // selectedItemBackground
+            '#838383', // tabText
+            'black', // selectedTabText
+            'white', // mainBackground
+            '#fafafa', // headerBackground
+            '#fafafa', // footerBackground
+            '#fafafa', // sidePaneBackground
+            'black', // primaryText
+            '#838383', // secondaryText
+            '#e7e7e7', // breadcrumbBackground
+            '#666', // sliderBackground
+            'black', // sliderThumbBackground
+            '#838383', // albumCoverLogo
+            '#cecece', // albumCoverBackground
+            '#c7c7c7', // paneSeparators
+            '#c7c7c7', // settingsSeparators
+            '#c7c7c7', // contextMenuSeparators
+            '#abaeaf', // scrollBars
+            '#e7e7e7', // searchBox
+            '#000', // searchBoxText
+            '#000', // searchBoxIcon
+            '#fafafa', // dialogBackground
+            '#fff', // primaryButtonText
+            '#e1e1e1', // secondaryButtonBackground
+            '#000', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const options: ThemeOptions = new ThemeOptions(true);
+
+        return new Theme('Gruvbox', this.creator, new ThemeCoreColors('#3c3836', '#504945', '#665c54'), darkColors, lightColors, options);
+
+    }
+
+
+    private createCatppuccinMojaveTheme(): Theme {
+        const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
+            'white', // windowButtonIcon
+            'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
+            'rgba(255, 255, 255, 0.1)', // selectedItemBackground
+            '#818181', // tabText
+            'white', // selectedTabText
+            '#26243a', // mainBackground
+            '#1d1c2c', // headerBackground
+            '#1d1c2c', // footerBackground
+            '#1d1c2c', // sidePaneBackground
+            'white', // primaryText
+            '#818181', // secondaryText
+            '#373737', // breadcrumbBackground
+            '#999', // sliderBackground
+            'white', // sliderThumbBackground
+            '#5e5e5e', // albumCoverLogo
+            '#272727', // albumCoverBackground
+            '#1b1b1b', // paneSeparators
+            '#1b1b1b', // settingsSeparators
+            '#1b1b1b', // contextMenuSeparators
+            '#7a7a79', // scrollBars
+            '#25243a', // searchBox
+            '#fff', // searchBoxText
+            '#fff', // searchBoxIcon
+            '#1b1923', // dialogBackground
+            '#fff', // primaryButtonText
+            '#595959', // secondaryButtonBackground
+            '#fff', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const lightColors: ThemeNeutralColors = new ThemeNeutralColors(
+            'black', // windowButtonIcon
+            'rgba(0, 0, 0, 0.05)', // hoveredItemBackground
+            'rgba(0, 0, 0, 0.1)', // selectedItemBackground
+            '#838383', // tabText
+            'black', // selectedTabText
+            'white', // mainBackground
+            '#fafafa', // headerBackground
+            '#fafafa', // footerBackground
+            '#fafafa', // sidePaneBackground
+            'black', // primaryText
+            '#838383', // secondaryText
+            '#e7e7e7', // breadcrumbBackground
+            '#666', // sliderBackground
+            'black', // sliderThumbBackground
+            '#838383', // albumCoverLogo
+            '#cecece', // albumCoverBackground
+            '#c7c7c7', // paneSeparators
+            '#c7c7c7', // settingsSeparators
+            '#c7c7c7', // contextMenuSeparators
+            '#abaeaf', // scrollBars
+            '#e7e7e7', // searchBox
+            '#000', // searchBoxText
+            '#000', // searchBoxIcon
+            '#fafafa', // dialogBackground
+            '#fff', // primaryButtonText
+            '#e1e1e1', // secondaryButtonBackground
+            '#000', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const options: ThemeOptions = new ThemeOptions(true);
+
+        return new Theme('Catppuccin Mojave', this.creator, new ThemeCoreColors('#9d7fc5', '#50486f', '#c499f2'), darkColors, lightColors, options);
+
+    }
+
     private createCatppuccinTheme(): Theme {
         const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
             'white', // windowButtonIcon
@@ -430,71 +571,7 @@ export class DefaultThemesCreator {
         return new Theme('Catppuccin', this.creator, new ThemeCoreColors('#e38c8f', '#b1e3ad', '#f2cecf'), darkColors, lightColors, options);
     }
 
-    private createPalenightTheme(): Theme {
-        const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
-            '#7b83a7', // windowButtonIcon
-            'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
-            'rgba(255, 255, 255, 0.1)', // selectedItemBackground
-            '#7b83a7', // tabText
-            '#fbfdfd', // selectedTabText
-            '#2f3447', // mainBackground
-            '#272b3b', // headerBackground
-            '#272b3b', // footerBackground
-            '#2b3042', // sidePaneBackground
-            '#fbfdfd', // primaryText
-            '#7b83a7', // secondaryText
-            '#3a3f53', // breadcrumbBackground
-            '#888', // sliderBackground
-            '#fff', // sliderThumbBackground
-            '#7b83a7', // albumCoverLogo
-            '#212433', // albumCoverBackground
-            'transparent', // paneSeparators
-            '#282c3d', // settingsSeparators
-            '#31364a', // contextMenuSeparators
-            '#00908c', // scrollBars
-            '#2f3447', // searchBox
-            '#fbfdfd', // searchBoxText
-            '#7b83a7', // searchBoxIcon
-            '#272b3b', // dialogBackground
-            '#fff', // primaryButtonText
-            '#3a3f53', // secondaryButtonBackground
-            '#fff', // secondaryButtonText
-            '#fff' // tooltipText
-        );
-
-        const lightColors: ThemeNeutralColors = new ThemeNeutralColors(
-            '#7b83a7', // windowButtonIcon
-            'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
-            'rgba(0, 0, 0, 0.1)', // selectedItemBackground
-            '#7b83a7', // tabText
-            '#fbfdfd', // selectedTabText
-            '#2f3447', // mainBackground
-            '#272b3b', // headerBackground
-            '#272b3b', // footerBackground
-            '#2b3042', // sidePaneBackground
-            '#fbfdfd', // primaryText
-            '#7b83a7', // secondaryText
-            '#3a3f53', // breadcrumbBackground
-            '#888', // sliderBackground
-            '#fff', // sliderThumbBackground
-            '#7b83a7', // albumCoverLogo
-            '#212433', // albumCoverBackground
-            'transparent', // paneSeparators 
-            '#282c3d', // settingsSeparators
-            '#31364a', // contextMenuSeparators
-            '#00908c', // scrollBars
-            '#2f3447', // searchBox
-            '#fbfdfd', // searchBoxText
-            '#7b83a7', // searchBoxIcon
-            '#272b3b', // dialogBackground
-            '#fff', // primaryButtonText
-            '#3a3f53', // secondaryButtonBackground
-            '#fff', // secondaryButtonText
-            '#fff' // tooltipText
-        );
-
-        const options: ThemeOptions = new ThemeOptions(true);
-
-        return new Theme('Palenight', this.creator, new ThemeCoreColors('#008884', '#56c6c1', '#00908c'), darkColors, lightColors, options);
-    }
+    
 }
+
+
