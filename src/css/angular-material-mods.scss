@@ -4,11 +4,18 @@
 // -----------------------------------------------------------------------------------------------------------------------------------------
 .mat-app-background {
     border-radius: 10px;
-    background-color: var(--theme-main-background) !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../assets/images/shape-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
+
 .mat-drawer-container {
     border-radius: 10px;
-    background-color: var(--theme-main-background) !important;
+    background: linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)), url(../assets/images/shape-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .mat-drawer {
@@ -25,6 +32,7 @@
     border-radius: 10px;
     background-color: var(--theme-dialog-background) !important;
 }
+
 .mat-select-panel {
     border-radius: 10px;
     background-color: var(--theme-dialog-background) !important;
@@ -39,6 +47,7 @@
     border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.1) !important;
 }
+
 .mat-menu-item:hover {
     border-radius: 10px;
     background-color: rgba(var(--theme-rgb-base), 0.06) !important;
@@ -233,7 +242,7 @@
     margin: 0px !important;
 }
 
-.cdk-global-overlay-wrapper > .cdk-overlay-pane {
+.cdk-global-overlay-wrapper>.cdk-overlay-pane {
     margin-top: 50px !important;
 }
 
@@ -266,6 +275,7 @@ mat-tab-group {
 
 .mat-tab-body-content {
     border-radius: 10px;
+
     // Prevents showing of horizontal scrollbar when switching tabs (might be related to cdk virtual scroll)
     // Found on: https://github.com/angular/components/issues/6104
     &.ng-animating {

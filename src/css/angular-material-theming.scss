@@ -1,7 +1,8 @@
 @use '@angular/material' as mat;
+@import url("https://fonts.googleapis.com/css2?family=Butcherman&family=Poppins:wght@400;500;600;700&display=swap");
 
 $custom-typography: mat.define-legacy-typography-config(
-    $font-family: 'opensans',
+    $font-family: 'Butcherman',
 );
 
 // TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.

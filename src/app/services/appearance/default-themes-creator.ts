@@ -12,6 +12,7 @@ export class DefaultThemesCreator {
     public createAllThemes(): Theme[] {
         const themes: Theme[] = [];
         themes.push(this.createNeuronTheme());
+        themes.push(this.createNHTheme());
         themes.push(this.createZuneTheme());
         themes.push(this.createBeatsTheme());
         themes.push(this.createNaughtyTheme());
@@ -89,6 +90,74 @@ export class DefaultThemesCreator {
         const options: ThemeOptions = new ThemeOptions(false);
 
         return new Theme('Neuron Default', this.creator, new ThemeCoreColors('#6260e3', '#3fdcdd', '#4883e0'), darkColors, lightColors, options);
+    }
+
+    private createNHTheme(): Theme {
+        const darkColors: ThemeNeutralColors = new ThemeNeutralColors(
+            '#5e5e5e', // windowButtonIcon
+            'rgba(255, 255, 255, 0.05)', // hoveredItemBackground
+            'rgba(255, 255, 255, 0.1)', // selectedItemBackground
+            '#666', // tabText
+            '#fff', // selectedTabText
+            '#110f0e', // mainBackground
+            '#131110dd', // headerBackground
+            '#131110dd', // footerBackground
+            '#131110dd', // sidePaneBackground
+            '#fff', // primaryText
+            '#5e5e5e', // secondaryText
+            '#272727', // breadcrumbBackground
+            '#999', // sliderBackground
+            '#fff', // sliderThumbBackground
+            '#5e5e5e', // albumCoverLogo
+            '#202020', // albumCoverBackground
+            'transparent', // paneSeparators
+            '#363636', // settingsSeparators
+            '#363636', // contextMenuSeparators
+            '#4883e0', // scrollBars
+            '#202020', // searchBox
+            '#fff', // searchBoxText
+            '#5e5e5e', // searchBoxIcon
+            '#131110dd', // dialogBackground
+            '#fff', // primaryButtonText
+            '#585858', // secondaryButtonBackground
+            '#fff', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const lightColors: ThemeNeutralColors = new ThemeNeutralColors(
+            '#838383', // windowButtonIcon
+            'rgba(0, 0, 0, 0.05)', // hoveredItemBackground
+            'rgba(0, 0, 0, 0.1)', // selectedItemBackground
+            '#909090', // tabText
+            '#000', // selectedTabText
+            '#f5f5f5', // mainBackground
+            '#fdfdfd', // headerBackground
+            '#fdfdfd', // footerBackground
+            '#efefef', // sidePaneBackground
+            '#000', // primaryText
+            '#838383', // secondaryText
+            '#dfdfdf', // breadcrumbBackground
+            '#666', // sliderBackground
+            '#000', // sliderThumbBackground
+            '#838383', // albumCoverLogo
+            '#cecece', // albumCoverBackground
+            'transparent', // paneSeparators
+            '#d7d7d7', // settingsSeparators
+            '#d7d7d7', // contextMenuSeparators
+            '#4883e0', // scrollBars
+            '#dfdfdf', // searchBox
+            '#000', // searchBoxText
+            '#000', // searchBoxIcon
+            '#fdfdfd', // dialogBackground
+            '#fff', // primaryButtonText
+            '#e0e0e0', // secondaryButtonBackground
+            '#000', // secondaryButtonText
+            '#fff' // tooltipText
+        );
+
+        const options: ThemeOptions = new ThemeOptions(false);
+
+        return new Theme('Neuron Halloween', this.creator, new ThemeCoreColors('#db6724', '#110f0e', '#ca5f21'), darkColors, lightColors, options);
     }
 
     private createZuneTheme(): Theme {

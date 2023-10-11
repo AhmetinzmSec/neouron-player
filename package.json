@@ -1,7 +1,7 @@
 {
-    "name": "Neuron",
-    "version": "3.0.0",
-    "versionSuffix": "alpha.pre-1",
+    "name": "neuron",
+    "version": "4.0.0",
+    "versionSuffix": "booooooooo",
     "copyright": "Copyright Hackadia Ⓒ 2023",
     "description": "Audio player",
     "homepage": "https://github.com/hackadia/neuron",
